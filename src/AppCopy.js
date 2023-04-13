@@ -16,7 +16,7 @@ function App() {
   }, []);
 
   const filteredArray = fetchMovies.filter((eachMovie) => {
-    return eachMovie.title.toLowerCase().includes(searchMovies.toLowerCase()) 
+    return eachMovie.title.toLowerCase().includes(searchMovies.toLowerCase())
     || eachMovie.release_date.includes(searchMovies);
   });
 
@@ -25,7 +25,6 @@ function App() {
      <Header />
      <Search setSearchMovies={setSearchMovies}/>
      <ContentList fetchMovies={filteredArray}/>
-     
     </div>
   );
 }
